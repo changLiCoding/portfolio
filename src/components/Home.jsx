@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../../public/images/me.png";
+import HeroImage from "../images/me.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
@@ -24,7 +24,7 @@ export default function Home() {
 							to='portfolio'
 							smooth
 							duration={500}
-							className='group w-fit px-6 py-3 my-2 flex items-center rounded-md btn'>
+							className='group w-fit px-6 py-3 my-2 flex items-center rounded-md btn btn-primary hover:scale-95 duration-300'>
 							Portfolio
 							<span className='group-hover:rotate-90 duration-300'>
 								<MdOutlineKeyboardArrowRight

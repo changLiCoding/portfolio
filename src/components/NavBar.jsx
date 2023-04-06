@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function NavBar() {
 	const [nav, setNav] = useState(false);
 
+	const { theme, toggleTheme } = useContext(ThemeContext);
+	useEffect(() => {
+		document.documentElement.setAttribute("data-theme", theme);
+	}, [theme]);
 	const links = [
 		{
 			id: 1,
@@ -32,11 +37,11 @@ export default function NavBar() {
 		<nav className='flex bg-gradient-to-b from-neutral to-neutral-focus justify-between items-center w-full h-20 px-4 nav fixed'>
 			<div>
 				<Link
-					className='text-3xl font-signature ml-2 cursor-pointer'
+					className='text-5xl font-name ml-2 text-primary-focus cursor-pointer'
 					to='home'
 					smooth
 					duration={500}>
-					Chang Li
+					Chang
 				</Link>
 			</div>
 
@@ -54,7 +59,17 @@ export default function NavBar() {
 					</li>
 				))}
 				<li>
-					<FaMoon className='cursor-pointer text-base-300' />
+					{theme === "cupcake" ? (
+						<FaMoon
+							className='cursor-pointer text-base-300'
+							onClick={toggleTheme}
+						/>
+					) : (
+						<FaSun
+							className='cursor-pointer text-white'
+							onClick={toggleTheme}
+						/>
+					)}
 				</li>
 			</ul>
 
