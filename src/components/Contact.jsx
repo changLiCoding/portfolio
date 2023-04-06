@@ -34,7 +34,7 @@ export default function Contact() {
 							name='message'
 							placeholder='Enter your message'
 							rows='10'
-							className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'></textarea>
+							className='p-2 bg-transparent border-2 rounded-md  focus:outline-none'></textarea>
 
 						<button className='btn btn-primary px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-95 duration-300'>
 							Let's talk

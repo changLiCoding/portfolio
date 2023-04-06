@@ -11,12 +11,12 @@ export default function Home() {
 			<div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
 				<div className='flex flex-col justify-center h-full'>
 					<h2 className='text-4xl sm:text-7xl font-bold '>
-						I'm a Full Stack Developer
+						A Full Stack Developer
 					</h2>
 					<p className='text-gray-500 py-4 max-w-md'>
-						I have 1 year of experience building and desgining software.
-						Currently, I love to work on web application using technologies like
-						React, Tailwind, Next JS and GraphQL.
+						Proficient in JavaScript, Ruby, Python, and TypeScript with a deep
+						understanding of React, Redux, NodeJS and Express. Passionate about
+						video games and cooking, and always eager to learn new things.
 					</p>
 
 					<div>

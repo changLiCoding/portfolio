@@ -58,11 +58,11 @@ export default function Portfolio() {
 					{portfolios.map(({ id, src, git, demo }) => (
 						<div
 							key={id}
-							className='shadow-md shadow-gray-600 rounded-lg'>
+							className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
 							<img
 								src={src}
 								alt=''
-								className='rounded-md duration-200 hover:scale-105'
+								className='rounded-md '
 							/>
 							<div className='flex items-center justify-center'>
 								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>

@@ -13,23 +13,28 @@ export default function About() {
 				</div>
 
 				<p className='text-xl mt-20'>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-					deserunt illum mollitia officiis qui exercitationem perferendis neque
-					quasi a recusandae necessitatibus tempora iusto! Blanditiis error
-					iste, totam fugiat recusandae rerum laborum perferendis molestiae
-					aperiam asperiores nemo. Magni dolor maxime debitis vitae, eaque hic
-					ab mollitia voluptatibus, a nostrum eveniet laborum!
+					As a Full Stack Developer with over a year of experience in coding, I
+					have gained expertise in multiple programming languages, including
+					JavaScript, Ruby, Python, and TypeScript. Prior to my career in
+					coding, I spent 8 years as a computer mechanic and store manager,
+					which gave me valuable experience in both technical and managerial
+					roles.
 				</p>
 
 				<br />
 
 				<p className='text-xl'>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-					pariatur, vel similique sint, nobis aspernatur ut praesentium
-					explicabo ipsam aliquid quasi laboriosam et culpa possimus repudiandae
-					quisquam ullam maiores ab unde. Fugiat odio mollitia nemo alias.
-					Commodi facilis atque nulla vero voluptatem explicabo. Quibusdam,
-					magni quo! Eum cupiditate debitis labore.
+					My deep understanding of React and Redux allows me to develop robust
+					and efficient applications. I am constantly learning and staying
+					up-to-date with the latest technologies and industry trends, as I am
+					passionate about providing the best possible solutions for my clients
+					or customers.
+				</p>
+				<p className='text-xl'>
+					When I'm not coding, I enjoy playing video games and experimenting
+					with new recipes in the kitchen. I believe that these hobbies allow me
+					to approach problem-solving with a fresh perspective, and help me stay
+					creative and adaptable in my work.
 				</p>
 			</div>
 		</div>
