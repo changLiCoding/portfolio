@@ -1,14 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<div className='container'>
-			<App />
-			<h1 className='text-3xl font-bold underline'>Hello world!</h1>
-		</div>
-	</React.StrictMode>,
-	document.getElementById("root")
+		<App />
+	</React.StrictMode>
 );
