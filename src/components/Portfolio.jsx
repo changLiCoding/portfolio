@@ -1,36 +1,44 @@
 import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import ccc_music_emporium from "../assets/portfolio/ccc_music_emporium.jpg";
+import eclothing from "../assets/portfolio/eclothing.jpg";
+import natours from "../assets/portfolio/natours.jpg";
+import jungle from "../assets/portfolio/jungle.jpg";
+import quizApp from "../assets/portfolio/quizApp.jpg";
+import interviewScheduler from "../assets/portfolio/interview-scheduler.jpg";
 
 export default function Portfolio() {
 	const portfolios = [
 		{
 			id: 1,
-			src: arrayDestruct,
+			src: ccc_music_emporium,
+			git: "https://github.com/changLiCoding/ccc_music_emporium",
 		},
 		{
 			id: 2,
-			src: reactParallax,
+			src: eclothing,
+			git: "https://github.com/changliCoding/TurboEclothing",
+			demo: "https://eclothingproject.netlify.app/",
 		},
 		{
 			id: 3,
-			src: navbar,
+			src: natours,
+			git: "https://github.com/changliCoding/natours",
 		},
 		{
 			id: 4,
-			src: reactSmooth,
+			src: jungle,
+			git: "https://github.com/changLiCoding/jungle-rails",
 		},
 		{
 			id: 5,
-			src: installNode,
+			src: quizApp,
+			git: "https://github.com/changLiCoding/QuizApp",
 		},
 		{
 			id: 6,
-			src: reactWeather,
+			src: interviewScheduler,
+			git: "https://github.com/changLiCoding/InterviewScheduler",
+			demo: "https://interview-scheduler-reactjs.netlify.app/",
 		},
 	];
 
@@ -47,7 +55,7 @@ export default function Portfolio() {
 				</div>
 
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-					{portfolios.map(({ id, src }) => (
+					{portfolios.map(({ id, src, git, demo }) => (
 						<div
 							key={id}
 							className='shadow-md shadow-gray-600 rounded-lg'>
@@ -58,10 +66,10 @@ export default function Portfolio() {
 							/>
 							<div className='flex items-center justify-center'>
 								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-									Demo
+									<a href={demo ? demo : "#"}>Demo</a>
 								</button>
 								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-									Code
+									<a href={git}>Code</a>
 								</button>
 							</div>
 						</div>
