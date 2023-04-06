@@ -41,6 +41,12 @@ export default function Contact() {
 						</button>
 					</form>
 				</div>
+				<p className='text-center'>
+					Designed And Developed With 🎮 By
+					<a href='https://www.linkedin.com/in/chang-li-16abb5231/'>
+						<b> Chang Li</b>
+					</a>
+				</p>
 			</div>
 		</div>
 	);
