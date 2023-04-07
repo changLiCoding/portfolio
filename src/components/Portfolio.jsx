@@ -22,6 +22,8 @@ export default function Portfolio() {
 				"https://i.ibb.co/xSy5ZNn/ccc-music-emporium5.jpg",
 				"https://i.ibb.co/Qd3439L/ccc-music-emporium6.jpg",
 			],
+			title: "CCC Music Emporium",
+			description: "The emporium ",
 		},
 		{
 			id: 2,
