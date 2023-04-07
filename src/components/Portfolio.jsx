@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ccc_music_emporium from "../assets/portfolio/ccc_music_emporium.jpg";
 import eclothing from "../assets/portfolio/eclothing.jpg";
 import natours from "../assets/portfolio/natours.jpg";
 import jungle from "../assets/portfolio/jungle.jpg";
 import quizApp from "../assets/portfolio/quizApp.jpg";
 import interviewScheduler from "../assets/portfolio/interview-scheduler.jpg";
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Portfolio() {
 	const portfolios = [
@@ -45,7 +47,7 @@ export default function Portfolio() {
 	return (
 		<div
 			name='portfolio'
-			className='w-full md:h-screen'>
+			className='w-full h-fit lg:h-screen'>
 			<div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
 				<div className='pb-8'>
 					<p className='text-4xl font-bold inline border-b-4 border-gray-500'>
@@ -56,7 +58,7 @@ export default function Portfolio() {
 
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
 					{portfolios.map(({ id, src, git, demo }) => (
-						<>
+						<Fragment key={id}>
 							{/* The button to open modal */}
 							{/* <label
 								htmlFor='my-modal-4'
@@ -66,11 +68,9 @@ export default function Portfolio() {
 
 							{/* Put this part before </body> tag */}
 
-							<div
-								key={id}
-								className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
+							<div className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
 								<label
-									htmlFor='my-modal-4'
+									htmlFor={`my-modal-${id}`}
 									className=' cursor-pointer'>
 									<img
 										src={src}
@@ -93,15 +93,95 @@ export default function Portfolio() {
 							</div>
 							<input
 								type='checkbox'
-								id='my-modal-4'
+								id={`my-modal-${id}`}
 								className='modal-toggle'
 							/>
 							<label
-								htmlFor='my-modal-4'
+								htmlFor={`my-modal-${id}`}
 								className='modal cursor-pointer'>
-								<div
-									className='modal-box relative w-11/12 max-w-5xl'
+								<label
+									className='modal-box relative w-9/12 max-w-5xl z-10'
 									htmlFor=''>
+									<div className='carousel w-full'>
+										<div
+											id='slide1'
+											className='carousel-item relative w-full'>
+											<img
+												src={src}
+												className='w-full'
+											/>
+											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+												<a href='#slide4'>
+													<FaArrowLeft className='btn btn-circle' />
+												</a>
+												<a
+													href='#slide2'
+													className='btn btn-circle'>
+													<FaArrowRight />
+												</a>
+											</div>
+										</div>
+										<div
+											id='slide2'
+											className='carousel-item relative w-full'>
+											<img
+												src='/images/stock/photo-1609621838510-5ad474b7d25d.jpg'
+												className='w-full'
+											/>
+											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+												<a
+													href='#slide1'
+													className='btn btn-circle'>
+													<FaArrowLeft />
+												</a>
+												<a
+													href='#slide3'
+													className='btn btn-circle'>
+													<FaArrowRight />
+												</a>
+											</div>
+										</div>
+										<div
+											id='slide3'
+											className='carousel-item relative w-full'>
+											<img
+												src='/images/stock/photo-1414694762283-acccc27bca85.jpg'
+												className='w-full'
+											/>
+											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+												<a
+													href='#slide2'
+													className='btn btn-circle'>
+													<FaArrowLeft />
+												</a>
+												<a
+													href='#slide4'
+													className='btn btn-circle'>
+													<FaArrowRight />
+												</a>
+											</div>
+										</div>
+										<div
+											id='slide4'
+											className='carousel-item relative w-full'>
+											<img
+												src='/images/stock/photo-1665553365602-b2fb8e5d1707.jpg'
+												className='w-full'
+											/>
+											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+												<a
+													href='#slide3'
+													className='btn btn-circle'>
+													<FaArrowLeft />
+												</a>
+												<a
+													href='#slide1'
+													className='btn btn-circle'>
+													<FaArrowRight />
+												</a>
+											</div>
+										</div>
+									</div>
 									<h3 className='text-lg font-bold'>
 										Congratulations random Internet user!
 									</h3>
@@ -109,9 +189,9 @@ export default function Portfolio() {
 										You've been selected for a chance to get one year of
 										subscription to use Wikipedia for free!
 									</p>
-								</div>
+								</label>
 							</label>
-						</>
+						</Fragment>
 					))}
 				</div>
 			</div>

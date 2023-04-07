@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div
 			name='home'
-			className='h-screen w-full '>
+			className='h-screen w-full'>
 			<div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
 				<div className='flex flex-col justify-center h-full'>
 					<h2 className='text-4xl sm:text-7xl font-bold '>
@@ -40,7 +40,7 @@ export default function Home() {
 					<img
 						src={HeroImage}
 						alt='my profile'
-						className='rounded-2xl mx-auto w-2/3 max-h-full md:w-full md:max-h-96'
+						className='rounded-2xl mx-auto w-2/3 max-h-full mb-2 md:w-full md:max-h-96'
 					/>
 				</div>
 			</div>
