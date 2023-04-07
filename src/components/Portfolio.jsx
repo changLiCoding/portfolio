@@ -14,33 +14,81 @@ export default function Portfolio() {
 			id: 1,
 			src: ccc_music_emporium,
 			git: "https://github.com/changLiCoding/ccc_music_emporium",
+			images: [
+				"/portfolio/src/assets/portfolio/ccc_music_emporium1.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium2.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium3.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium4.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium5.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium6.jpg",
+			],
 		},
 		{
 			id: 2,
 			src: eclothing,
 			git: "https://github.com/changliCoding/TurboEclothing",
 			demo: "https://eclothingproject.netlify.app/",
+			images: [
+				"/portfolio/src/assets/portfolio/eclothing1.jpg",
+				"/portfolio/src/assets/portfolio/eclothing2.jpg",
+				"/portfolio/src/assets/portfolio/eclothing3.jpg",
+				"/portfolio/src/assets/portfolio/eclothing4.jpg",
+				"/portfolio/src/assets/portfolio/eclothing5.jpg",
+				"/portfolio/src/assets/portfolio/eclothing6.jpg",
+			],
 		},
 		{
 			id: 3,
 			src: natours,
 			git: "https://github.com/changliCoding/natours",
+			images: [
+				"/portfolio/src/assets/portfolio/ccc_music_emporium1.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium2.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium3.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium4.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium5.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium6.jpg",
+			],
 		},
 		{
 			id: 4,
 			src: jungle,
 			git: "https://github.com/changLiCoding/jungle-rails",
+			images: [
+				"/portfolio/src/assets/portfolio/ccc_music_emporium1.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium2.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium3.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium4.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium5.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium6.jpg",
+			],
 		},
 		{
 			id: 5,
 			src: quizApp,
 			git: "https://github.com/changLiCoding/QuizApp",
+			images: [
+				"/portfolio/src/assets/portfolio/ccc_music_emporium1.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium2.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium3.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium4.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium5.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium6.jpg",
+			],
 		},
 		{
 			id: 6,
 			src: interviewScheduler,
 			git: "https://github.com/changLiCoding/InterviewScheduler",
 			demo: "https://interview-scheduler-reactjs.netlify.app/",
+			images: [
+				"/portfolio/src/assets/portfolio/ccc_music_emporium1.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium2.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium3.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium4.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium5.jpg",
+				"/portfolio/src/assets/portfolio/ccc_music_emporium6.jpg",
+			],
 		},
 	];
 
@@ -57,17 +105,8 @@ export default function Portfolio() {
 				</div>
 
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-					{portfolios.map(({ id, src, git, demo }) => (
-						<Fragment key={id}>
-							{/* The button to open modal */}
-							{/* <label
-								htmlFor='my-modal-4'
-								className='btn'>
-								open modal
-							</label> */}
-
-							{/* Put this part before </body> tag */}
-
+					{portfolios.map(({ id, src, git, demo, images }) => (
+						<div key={id}>
 							<div className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
 								<label
 									htmlFor={`my-modal-${id}`}
@@ -104,83 +143,57 @@ export default function Portfolio() {
 									htmlFor=''>
 									<div className='carousel w-full'>
 										<div
-											id='slide1'
+											id={`slide${7 * (id - 1) + 1}`}
 											className='carousel-item relative w-full'>
 											<img
 												src={src}
 												className='w-full'
 											/>
 											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-												<a href='#slide4'>
+												<a href={`#slide${7 * (id - 1) + 7}`}>
 													<FaArrowLeft className='btn btn-circle' />
 												</a>
 												<a
-													href='#slide2'
+													href={`#slide${7 * (id - 1) + 2}`}
 													className='btn btn-circle'>
 													<FaArrowRight />
 												</a>
 											</div>
 										</div>
-										<div
-											id='slide2'
-											className='carousel-item relative w-full'>
-											<img
-												src='/images/stock/photo-1609621838510-5ad474b7d25d.jpg'
-												className='w-full'
-											/>
-											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-												<a
-													href='#slide1'
-													className='btn btn-circle'>
-													<FaArrowLeft />
-												</a>
-												<a
-													href='#slide3'
-													className='btn btn-circle'>
-													<FaArrowRight />
-												</a>
-											</div>
-										</div>
-										<div
-											id='slide3'
-											className='carousel-item relative w-full'>
-											<img
-												src='/images/stock/photo-1414694762283-acccc27bca85.jpg'
-												className='w-full'
-											/>
-											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-												<a
-													href='#slide2'
-													className='btn btn-circle'>
-													<FaArrowLeft />
-												</a>
-												<a
-													href='#slide4'
-													className='btn btn-circle'>
-													<FaArrowRight />
-												</a>
-											</div>
-										</div>
-										<div
-											id='slide4'
-											className='carousel-item relative w-full'>
-											<img
-												src='/images/stock/photo-1665553365602-b2fb8e5d1707.jpg'
-												className='w-full'
-											/>
-											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-												<a
-													href='#slide3'
-													className='btn btn-circle'>
-													<FaArrowLeft />
-												</a>
-												<a
-													href='#slide1'
-													className='btn btn-circle'>
-													<FaArrowRight />
-												</a>
-											</div>
-										</div>
+
+										{images &&
+											images.map((image, index) => {
+												return (
+													<div
+														key={`slide${index + 2}`}
+														id={`slide${7 * (id - 1) + index + 2}`}
+														className='carousel-item relative w-full'>
+														<img
+															src={image}
+															className='w-full'
+														/>
+														<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+															<a
+																href={`#slide${
+																	index === 0
+																		? 7 * (id - 1) + 1
+																		: 7 * (id - 1) + index + 1
+																}`}>
+																<FaArrowLeft className='btn btn-circle' />
+															</a>
+															<a
+																href={`#slide${
+																	index === 5
+																		? 7 * (id - 1) + 1
+																		: 7 * (id - 1) + index + 3
+																}`}
+																className='btn btn-circle'>
+																<FaArrowRight />
+															</a>
+														</div>
+													</div>
+												);
+											})}
 									</div>
 									<h3 className='text-lg font-bold'>
 										Congratulations random Internet user!
@@ -191,7 +204,7 @@ export default function Portfolio() {
 									</p>
 								</label>
 							</label>
-						</Fragment>
+						</div>
 					))}
 				</div>
 			</div>
