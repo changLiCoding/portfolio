@@ -150,8 +150,10 @@ export default function Portfolio() {
 												className='w-full'
 											/>
 											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-												<a href={`#slide${7 * (id - 1) + 7}`}>
-													<FaArrowLeft className='btn btn-circle' />
+												<a
+													className='btn btn-circle'
+													href={`#slide${7 * (id - 1) + 7}`}>
+													<FaArrowLeft />
 												</a>
 												<a
 													href={`#slide${7 * (id - 1) + 2}`}
@@ -174,12 +176,13 @@ export default function Portfolio() {
 														/>
 														<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
 															<a
+																className='btn btn-circle'
 																href={`#slide${
 																	index === 0
 																		? 7 * (id - 1) + 1
 																		: 7 * (id - 1) + index + 1
 																}`}>
-																<FaArrowLeft className='btn btn-circle' />
+																<FaArrowLeft />
 															</a>
 															<a
 																href={`#slide${
