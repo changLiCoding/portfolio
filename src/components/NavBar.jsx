@@ -34,7 +34,7 @@ export default function NavBar() {
 	];
 
 	return (
-		<nav className='flex bg-gradient-to-b from-neutral to-neutral-focus justify-between items-center w-full h-20 px-4 nav fixed'>
+		<nav className='flex bg-gradient-to-b from-neutral to-neutral-focus justify-between items-center w-full h-20 px-4 nav fixed z-20'>
 			<div>
 				<AnchorLink
 					className='text-5xl font-name ml-2 text-primary-focus cursor-pointer'

@@ -23,7 +23,8 @@ export default function Portfolio() {
 				"https://i.ibb.co/Qd3439L/ccc-music-emporium6.jpg",
 			],
 			title: "CCC Music Emporium",
-			description: "The emporium ",
+			description:
+				"CCC Music Emporium is an e-commerce website that allows users to buy or rent music products online, view order history and rate purchased products. The physical store locations integrated with <b>Mapbox</b>. The frontend is built using <b>React</b> and <b>Redux Toolkit</b>, while the backend uses <b>PostgreSQL</b> and <b>Node Express</b>. <b>Jsonwebtoken</b> is used to verify routes and ensure security, and <b>Stripe API</b> is implemented for payment solutions. The website's design is powered by <b>Tailwind</b> and <b>DaisayUI</b>, providing a sleek and modern user interface.",
 		},
 		{
 			id: 2,
@@ -38,6 +39,9 @@ export default function Portfolio() {
 				"https://i.ibb.co/Jyp95M9/eclothing5.png",
 				"https://i.ibb.co/FqBmzQp/eclothing6.jpg",
 			],
+			title: "E-Clothing",
+			description:
+				"Designed and developed a responsive e-commerce website with a user-friendly interface using <b>HTML, CSS, and ReactJS and JavaScript</b>. Managing back end, authentication login and database with <b>Firebase Function and Auth0</b>. Built streamlined checkout process with <b>Stripe API</b>. ",
 		},
 		{
 			id: 3,
@@ -51,6 +55,9 @@ export default function Portfolio() {
 				"https://i.ibb.co/88nrr7J/natours5.jpg",
 				"https://i.ibb.co/DkrQsQH/natours6.jpg",
 			],
+			title: "Natours",
+			description:
+				"Developed a responsive single page App with <b>Pug</b> backend rendering. Users could leave commits and ratings, with a secure authentication cookie sending <b>JSON Web Token</b>. A CRUD application exposed using a RESTful API made with <b>Node.js</b>. Exposed POST, GET, PATCH and DELETE HTTP methods using <b>Express</b>.",
 		},
 		{
 			id: 4,
@@ -64,6 +71,9 @@ export default function Portfolio() {
 				"https://i.ibb.co/j6P5k00/jungle5.jpg",
 				"https://i.ibb.co/wd5P2Mc/jungle6.jpg",
 			],
+			title: "Jungle",
+			description:
+				"Jungle is a <b>Ruby on Rails</b> e-commerce website that offers a wide variety of plants for sale online. The platform includes an admin panel for creating categories and managing products, while users receive email notifications with their order details. <b>Active Record</b> and <b>PostgreSQL</b> are used for database management, while the front-end is built using Bootstrap. The website is integrated with <b>StripeAPI</b> for secure payment processing. The application is developed using <b>test-driven development</b> and includes test units and end-to-end testing using <b>RSpec and Cypress</b>, ensuring that the website is reliable and secure.",
 		},
 		{
 			id: 5,
@@ -77,6 +87,9 @@ export default function Portfolio() {
 				"https://i.ibb.co/fDKGr08/quizApp5.jpg",
 				"https://i.ibb.co/Mshdcq8/quizz-App6.jpg",
 			],
+			title: "Quiz App",
+			description:
+				"Quiz App is an interactive platform that enables users to create, test, curate, and share quizzes and their results. The frontend is built using <b>EJS and Bootstrap</b> to provide an easy-to-use interface. The backend is built on <b>Node.js Express</b>, which is used to develop RESTful APIs, ensuring efficient communication between the client and the server. The app also employs <b>jQuery</b> for seamless animations and interactivity. Whether it's creating a quiz for fun, testing knowledge, or sharing results, Quiz App has you covered.",
 		},
 		{
 			id: 6,
@@ -91,6 +104,9 @@ export default function Portfolio() {
 				"https://i.ibb.co/BVrnkbX/interview-scheduler5.jpg",
 				"https://i.ibb.co/tqz9Kn1/interview-scheduler6.jpg",
 			],
+			title: "Interview Scheduler",
+			description:
+				"Interview Scheduler is a single page App that allows users to create, edit and delete scheduled interviews with candidates on <b>WebSocket</b> real-time without refreshing the page. The app uses modern web technologies such as <b>React</b> Hooks and <b>Redux</b> for state management, and <b>Axios</b> for making API calls to the server. Deployed front end on <b>Netlify</b>, back end on <b>RailWay</b>.",
 		},
 	];
 
@@ -107,112 +123,111 @@ export default function Portfolio() {
 				</div>
 
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-					{portfolios.map(({ id, src, git, demo, images }) => (
-						<div key={id}>
-							<div className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
+					{portfolios.map(
+						({ id, src, git, demo, images, title, description }) => (
+							<div key={id}>
+								<div className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-95 z-0'>
+									<label
+										htmlFor={`my-modal-${id}`}
+										className=' cursor-pointer'>
+										<img
+											src={src}
+											alt=''
+											className='rounded-md '
+										/>
+									</label>
+									<div className='flex items-center justify-center'>
+										<a
+											className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
+											href={demo ? demo : "#"}
+											target='_blank'>
+											Demo
+										</a>
+										<a
+											className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
+											href={git}
+											target='_blank'>
+											Code
+										</a>
+									</div>
+								</div>
+								<input
+									type='checkbox'
+									id={`my-modal-${id}`}
+									className='modal-toggle'
+								/>
 								<label
 									htmlFor={`my-modal-${id}`}
-									className=' cursor-pointer'>
-									<img
-										src={src}
-										alt=''
-										className='rounded-md '
-									/>
-								</label>
-								<div className='flex items-center justify-center'>
-									<a
-										className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
-										href={demo ? demo : "#"}
-										target='_blank'>
-										Demo
-									</a>
-									<a
-										className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
-										href={git}
-										target='_blank'>
-										Code
-									</a>
-								</div>
-							</div>
-							<input
-								type='checkbox'
-								id={`my-modal-${id}`}
-								className='modal-toggle'
-							/>
-							<label
-								htmlFor={`my-modal-${id}`}
-								className='modal cursor-pointer'>
-								<label
-									className='modal-box relative w-9/12 max-w-5xl z-10'
-									htmlFor=''>
-									<div className='carousel w-full'>
-										<div
-											id={`slide${7 * (id - 1) + 1}`}
-											className='carousel-item relative w-full'>
-											<img
-												src={src}
-												className='w-full'
-											/>
-											<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-												<a
-													className='btn btn-circle'
-													href={`#slide${7 * (id - 1) + 7}`}>
-													<FaArrowLeft />
-												</a>
-												<a
-													href={`#slide${7 * (id - 1) + 2}`}
-													className='btn btn-circle'>
-													<FaArrowRight />
-												</a>
+									className='modal cursor-pointer'>
+									<label
+										className='modal-box relative w-9/12 max-w-5xl z-10'
+										htmlFor=''>
+										<div className='carousel w-full'>
+											<div
+												id={`slide${7 * (id - 1) + 1}`}
+												className='carousel-item relative w-full'>
+												<img
+													src={src}
+													className='w-full'
+												/>
+												<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+													<a
+														className='btn btn-circle'
+														href={`#slide${7 * (id - 1) + 7}`}>
+														<FaArrowLeft />
+													</a>
+													<a
+														href={`#slide${7 * (id - 1) + 2}`}
+														className='btn btn-circle'>
+														<FaArrowRight />
+													</a>
+												</div>
 											</div>
-										</div>
 
-										{images &&
-											images.map((image, index) => {
-												return (
-													<div
-														key={`slide${index + 2}`}
-														id={`slide${7 * (id - 1) + index + 2}`}
-														className='carousel-item relative w-full'>
-														<img
-															src={`${image}`}
-															className='w-full'
-														/>
-														<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-															<a
-																className='btn btn-circle'
-																href={`#slide${
-																	index === 0
-																		? 7 * (id - 1) + 1
-																		: 7 * (id - 1) + index + 1
-																}`}>
-																<FaArrowLeft />
-															</a>
-															<a
-																href={`#slide${
-																	index === 5
-																		? 7 * (id - 1) + 1
-																		: 7 * (id - 1) + index + 3
-																}`}
-																className='btn btn-circle'>
-																<FaArrowRight />
-															</a>
+											{images &&
+												images.map((image, index) => {
+													return (
+														<div
+															key={`slide${index + 2}`}
+															id={`slide${7 * (id - 1) + index + 2}`}
+															className='carousel-item relative w-full'>
+															<img
+																src={`${image}`}
+																className='w-full'
+															/>
+															<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+																<a
+																	className='btn btn-circle'
+																	href={`#slide${
+																		index === 0
+																			? 7 * (id - 1) + 1
+																			: 7 * (id - 1) + index + 1
+																	}`}>
+																	<FaArrowLeft />
+																</a>
+																<a
+																	href={`#slide${
+																		index === 5
+																			? 7 * (id - 1) + 1
+																			: 7 * (id - 1) + index + 3
+																	}`}
+																	className='btn btn-circle'>
+																	<FaArrowRight />
+																</a>
+															</div>
 														</div>
-													</div>
-												);
-											})}
-									</div>
-									<h3 className='text-lg font-bold'>
-										Congratulations random Internet user!
-									</h3>
-									<p className='py-4'>
-										You've been selected for a chance to get one year of
-										subscription to use Wikipedia for free!
-									</p>
+													);
+												})}
+										</div>
+										<h3 className='text-lg font-bold'>{title}</h3>
+										<p
+											className='py-4'
+											dangerouslySetInnerHTML={{ __html: description }}></p>
+									</label>
 								</label>
-							</label>
-						</div>
-					))}
+							</div>
+						)
+					)}
 				</div>
 			</div>
 		</div>
