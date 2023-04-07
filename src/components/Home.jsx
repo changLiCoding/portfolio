@@ -1,12 +1,12 @@
 import React from "react";
 import HeroImage from "../images/me.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-scroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Home() {
 	return (
 		<div
-			name='home'
+			id='home'
 			className='h-screen w-full'>
 			<div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
 				<div className='flex flex-col justify-center h-full'>
@@ -20,10 +20,8 @@ export default function Home() {
 					</p>
 
 					<div>
-						<Link
-							to='portfolio'
-							smooth
-							duration={500}
+						<AnchorLink
+							href='#portfolio'
 							className='group w-fit px-6 py-3 my-2 flex items-center rounded-md btn btn-primary hover:scale-95 duration-300'>
 							Portfolio
 							<span className='group-hover:rotate-90 duration-300'>
@@ -32,7 +30,7 @@ export default function Home() {
 									className='ml-1'
 								/>
 							</span>
-						</Link>
+						</AnchorLink>
 					</div>
 				</div>
 

@@ -15,12 +15,12 @@ export default function Portfolio() {
 			src: ccc_music_emporium,
 			git: "https://github.com/changLiCoding/ccc_music_emporium",
 			images: [
-				"/public/images/ccc_music_emporium1.jpg",
-				"/public/images/ccc_music_emporium2.jpg",
-				"/public/images/ccc_music_emporium3.jpg",
-				"/public/images/ccc_music_emporium4.jpg",
-				"/public/images/ccc_music_emporium5.jpg",
-				"/public/images/ccc_music_emporium6.jpg",
+				"https://i.ibb.co/wSfDd4x/ccc-music-emporium1.jpg",
+				"https://i.ibb.co/D9wSPF3/ccc-music-emporium2.jpg",
+				"https://i.ibb.co/YBMwB93/ccc-music-emporium3.jpg",
+				"https://i.ibb.co/SJXJvsk/ccc-music-emporium4.jpg",
+				"https://i.ibb.co/xSy5ZNn/ccc-music-emporium5.jpg",
+				"https://i.ibb.co/Qd3439L/ccc-music-emporium6.jpg",
 			],
 		},
 		{
@@ -29,12 +29,12 @@ export default function Portfolio() {
 			git: "https://github.com/changliCoding/TurboEclothing",
 			demo: "https://eclothingproject.netlify.app/",
 			images: [
-				"/images/eclothing1.jpg",
-				"/images/eclothing2.jpg",
-				"/images/eclothing3.jpg",
-				"/images/eclothing4.jpg",
-				"/images/eclothing5.jpg",
-				"/images/eclothing6.jpg",
+				"https://i.ibb.co/ckVnHpz/eclothing1.jpg",
+				"https://i.ibb.co/SNz57ML/eclothing2.jpg",
+				"https://i.ibb.co/KytrdCd/eclothing3.jpg",
+				"https://i.ibb.co/5vqBCPh/eclothing4.jpg",
+				"https://i.ibb.co/Jyp95M9/eclothing5.png",
+				"https://i.ibb.co/FqBmzQp/eclothing6.jpg",
 			],
 		},
 		{
@@ -94,7 +94,7 @@ export default function Portfolio() {
 
 	return (
 		<div
-			name='portfolio'
+			id='portfolio'
 			className='w-full h-fit lg:h-screen'>
 			<div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
 				<div className='pb-8'>
@@ -120,12 +120,14 @@ export default function Portfolio() {
 								<div className='flex items-center justify-center'>
 									<a
 										className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
-										href={demo ? demo : "#"}>
+										href={demo ? demo : "#"}
+										target='_blank'>
 										Demo
 									</a>
 									<a
 										className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
-										href={git}>
+										href={git}
+										target='_blank'>
 										Code
 									</a>
 								</div>
@@ -171,7 +173,7 @@ export default function Portfolio() {
 														id={`slide${7 * (id - 1) + index + 2}`}
 														className='carousel-item relative w-full'>
 														<img
-															src={image}
+															src={`${image}`}
 															className='w-full'
 														/>
 														<div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
-import { Link } from "react-scroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function NavBar() {
@@ -36,13 +36,11 @@ export default function NavBar() {
 	return (
 		<nav className='flex bg-gradient-to-b from-neutral to-neutral-focus justify-between items-center w-full h-20 px-4 nav fixed'>
 			<div>
-				<Link
+				<AnchorLink
 					className='text-5xl font-name ml-2 text-primary-focus cursor-pointer'
-					to='home'
-					smooth
-					duration={500}>
+					href='#home'>
 					Chang
-				</Link>
+				</AnchorLink>
 			</div>
 
 			<ul className='hidden md:flex'>
@@ -50,12 +48,7 @@ export default function NavBar() {
 					<li
 						key={id}
 						className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-						<Link
-							to={link}
-							smooth
-							duration={500}>
-							{link}
-						</Link>
+						<AnchorLink href={`#${link}`}>{link}</AnchorLink>
 					</li>
 				))}
 				<li>
@@ -85,13 +78,11 @@ export default function NavBar() {
 						<li
 							key={id}
 							className='px-4 cursor-pointer capitalize py-6 text-4xl'>
-							<Link
+							<AnchorLink
 								onClick={() => setNav(!nav)}
-								to={link}
-								smooth
-								duration={500}>
+								href={`#${link}`}>
 								{link}
-							</Link>
+							</AnchorLink>
 						</li>
 					))}
 					<li
