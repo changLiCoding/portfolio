@@ -56,23 +56,62 @@ export default function Portfolio() {
 
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
 					{portfolios.map(({ id, src, git, demo }) => (
-						<div
-							key={id}
-							className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
-							<img
-								src={src}
-								alt=''
-								className='rounded-md '
-							/>
-							<div className='flex items-center justify-center'>
-								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-									<a href={demo ? demo : "#"}>Demo</a>
-								</button>
-								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-									<a href={git}>Code</a>
-								</button>
+						<>
+							{/* The button to open modal */}
+							{/* <label
+								htmlFor='my-modal-4'
+								className='btn'>
+								open modal
+							</label> */}
+
+							{/* Put this part before </body> tag */}
+
+							<div
+								key={id}
+								className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
+								<label
+									htmlFor='my-modal-4'
+									className=' cursor-pointer'>
+									<img
+										src={src}
+										alt=''
+										className='rounded-md '
+									/>
+								</label>
+								<div className='flex items-center justify-center'>
+									<a
+										className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
+										href={demo ? demo : "#"}>
+										Demo
+									</a>
+									<a
+										className='w-1/2 text-center px-6 py-3 m-4 duration-200 hover:scale-105'
+										href={git}>
+										Code
+									</a>
+								</div>
 							</div>
-						</div>
+							<input
+								type='checkbox'
+								id='my-modal-4'
+								className='modal-toggle'
+							/>
+							<label
+								htmlFor='my-modal-4'
+								className='modal cursor-pointer'>
+								<div
+									className='modal-box relative w-11/12 max-w-5xl'
+									htmlFor=''>
+									<h3 className='text-lg font-bold'>
+										Congratulations random Internet user!
+									</h3>
+									<p className='py-4'>
+										You've been selected for a chance to get one year of
+										subscription to use Wikipedia for free!
+									</p>
+								</div>
+							</label>
+						</>
 					))}
 				</div>
 			</div>
