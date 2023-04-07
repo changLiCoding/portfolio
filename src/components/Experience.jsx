@@ -8,6 +8,13 @@ import nextjs from "../assets/nextjs.png";
 import graphql from "../assets/graphql.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import firebase from "../assets/firebase.png";
+import mongo from "../assets/mongo.png";
+import aws from "../assets/aws.png";
+import node from "../assets/node.png";
+import ruby from "../assets/ruby.png";
+import postgresql from "../assets/postgre.png";
+import typescript from "../assets/typescript.png";
 
 export default function Experience() {
 	const techs = [
@@ -25,36 +32,78 @@ export default function Experience() {
 		},
 		{
 			id: 3,
-			src: javascript,
-			title: "JavaScript",
-			style: "shadow-yellow-500",
-		},
-		{
-			id: 4,
 			src: reactImage,
 			title: "React",
 			style: "shadow-blue-600",
 		},
 		{
-			id: 5,
+			id: 4,
 			src: tailwind,
 			title: "Tailwind",
 			style: "shadow-sky-400",
 		},
 		{
-			id: 6,
+			id: 5,
 			src: nextjs,
 			title: "Next JS",
 			style: "shadow-white",
 		},
 		{
+			id: 6,
+			src: javascript,
+			title: "JavaScript",
+			style: "shadow-yellow-500",
+		},
+		{
 			id: 7,
+			src: typescript,
+			title: "Typescript",
+			style: "shadow-blue-400",
+		},
+		{
+			id: 8,
 			src: graphql,
 			title: "GraphQL",
 			style: "shadow-pink-400",
 		},
 		{
-			id: 8,
+			id: 9,
+			src: firebase,
+			title: "Firebase",
+			style: "shadow-yellow-200",
+		},
+		{
+			id: 10,
+			src: node,
+			title: "NodeJS",
+			style: "shadow-green-200",
+		},
+		{
+			id: 11,
+			src: ruby,
+			title: "Ruby and Ruby on Rails",
+			style: "shadow-red-400",
+		},
+		{
+			id: 12,
+			src: mongo,
+			title: "MongoDB",
+			style: "shadow-green-400",
+		},
+		{
+			id: 13,
+			src: postgresql,
+			title: "PostgreSQL",
+			style: "shadow-blue-200",
+		},
+		{
+			id: 14,
+			src: aws,
+			title: "AWS",
+			style: "shadow-orange-400",
+		},
+		{
+			id: 15,
 			src: github,
 			title: "GitHub",
 			style: "shadow-gray-400",
@@ -64,13 +113,15 @@ export default function Experience() {
 	return (
 		<div
 			id='experience'
-			className='w-full h-screen'>
+			className='w-full'>
 			<div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full '>
 				<div>
 					<p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>
 						Experience
 					</p>
-					<p className='py-6'>These are the technologies I've worked with</p>
+					<p className='py-6'>
+						These are the technical stacks I've worked with
+					</p>
 				</div>
 
 				<div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
