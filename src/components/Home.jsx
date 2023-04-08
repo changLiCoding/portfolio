@@ -10,7 +10,7 @@ export default function Home() {
 			className='h-screen w-full'>
 			<div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
 				<div className='flex flex-col justify-center h-full'>
-					<h2 className='text-4xl mt-36 md:mt-0 md:text-7xl font-bold '>
+					<h2 className='text-4xl mt-80 md:mt-0 md:text-7xl font-bold '>
 						A Full Stack Developer
 					</h2>
 					<p className='text-gray-500 py-4 max-w-md'>
