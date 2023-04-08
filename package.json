@@ -1,9 +1,5 @@
 {
 	"homepage": "https://changlicoding.github.io/portfolio/",
-	"name": "portfolio",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"predeploy": "npm run build",
@@ -11,6 +7,10 @@
 		"build": "vite build",
 		"preview": "vite preview"
 	},
+	"name": "portfolio",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
 	"dependencies": {
 		"daisyui": "^2.51.5",
 		"react": "^18.2.0",

@@ -42,7 +42,7 @@ export default function Contact() {
 					</form>
 				</div>
 				<p className='text-center'>
-					Designed And Developed With 🎮 By
+					Designed and Built 2023 With 🎮 By
 					<a href='https://www.linkedin.com/in/chang-li-16abb5231/'>
 						<b className='text-secondary-focus'> Chang Li</b>
 					</a>
