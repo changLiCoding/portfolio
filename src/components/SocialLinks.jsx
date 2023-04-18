@@ -12,7 +12,7 @@ export default function SocialLinks() {
 					LinkedIn <FaLinkedin size={30} />
 				</>
 			),
-			href: "https://www.linkedin.com/in/chang-li-16abb5231/",
+			href: "https://www.linkedin.com/in/chang-li-link/",
 			style: "rounded-tr-md",
 		},
 		{
