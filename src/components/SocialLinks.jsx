@@ -40,7 +40,7 @@ export default function SocialLinks() {
 					Resume <BsFillPersonLinesFill size={30} />
 				</>
 			),
-			href: "/prtfolio/Resume Chang.pdf",
+			href: "/Resume Chang.pdf",
 			style: "rounded-br-md",
 			download: true,
 		},
