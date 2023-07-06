@@ -15,12 +15,12 @@ export default function Portfolio() {
 			git: "https://github.com/changLiCoding/game_list_client",
 			demo: "https://gamelistapp.netlify.app/home",
 			images: [
-				"https://i.ibb.co/PZjm4SK/gamelist-App-1.jpg",
-				"https://i.ibb.co/YTctLYb/gamelist-App-2.jpg",
-				"https://i.ibb.co/gwzQtQ7/gamelist-App-3.jpg",
-				"https://i.ibb.co/HHmhf2n/gamelist-App-4.jpg",
-				"https://i.ibb.co/bd88zpH/gamelist-App-5.jpg",
-				"https://i.ibb.co/FXZbpF6/gamelist-App-6.jpg",
+				"https://i.ibb.co/VSkZgSN/gamelist-App-1.jpg",
+				"https://i.ibb.co/7Wptp8J/gamelist-App-2.jpg",
+				"https://i.ibb.co/stZgHCT/gamelist-App-3.jpg",
+				"https://i.ibb.co/7KHydVB/gamelist-App-4.jpg",
+				"https://i.ibb.co/jZ1mQQT/gamelist-App-6.jpg",
+				"https://i.ibb.co/pjWbj7K/gamelist-App-7.jpg",
 			],
 			title: "GameList App",
 			description:
