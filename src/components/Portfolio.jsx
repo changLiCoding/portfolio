@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
 import ccc_music_emporium from "../assets/portfolio/ccc_music_emporium.jpg";
 import eclothing from "../assets/portfolio/eclothing.jpg";
 import natours from "../assets/portfolio/natours.jpg";
 import jungle from "../assets/portfolio/jungle.jpg";
 import quizApp from "../assets/portfolio/quizApp.jpg";
-import interviewScheduler from "../assets/portfolio/interview-scheduler.jpg";
+import gamelistApp from "../assets/portfolio/gamelistApp.jpg";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -12,6 +11,23 @@ export default function Portfolio() {
 	const portfolios = [
 		{
 			id: 1,
+			src: gamelistApp,
+			git: "https://github.com/changLiCoding/game_list_client",
+			demo: "https://gamelistapp.netlify.app/home",
+			images: [
+				"https://i.ibb.co/PZjm4SK/gamelist-App-1.jpg",
+				"https://i.ibb.co/YTctLYb/gamelist-App-2.jpg",
+				"https://i.ibb.co/gwzQtQ7/gamelist-App-3.jpg",
+				"https://i.ibb.co/HHmhf2n/gamelist-App-4.jpg",
+				"https://i.ibb.co/bd88zpH/gamelist-App-5.jpg",
+				"https://i.ibb.co/FXZbpF6/gamelist-App-6.jpg",
+			],
+			title: "GameList App",
+			description:
+				"GameList is a modern web app built using <b>React</b>, <b>TypeScript</b>, <b>GraphQL</b>, <b>Apollo Client</b>, <b>Ruby On Rails</b>, and <b>PostgreSQL</b>. It provides a user-friendly interface for managing and exploring a collection of games, making it easy to discover new titles, track progress, and connect with other gamers. It contain features like infinite scrolling, debouncing search, and sorting, and is integrated with the IGDB API to provide a comprehensive database of games. The app also includes a social aspect, allowing users to follow each other and share their game lists. The frontend is deployed on Netlify, while the backend is deployed on Railway.",
+		},
+		{
+			id: 2,
 			src: ccc_music_emporium,
 			git: "https://github.com/changLiCoding/ccc_music_emporium",
 			images: [
@@ -27,7 +43,7 @@ export default function Portfolio() {
 				"CCC Music Emporium is an e-commerce website that allows users to buy or rent music products online, view order history and rate purchased products. The physical store locations integrated with <b>Mapbox</b>. The frontend is built using <b>React</b> and <b>Redux Toolkit</b>, while the backend uses <b>PostgreSQL</b> and <b>Node Express</b>. <b>Jsonwebtoken</b> is used to verify routes and ensure security, and <b>Stripe API</b> is implemented for payment solutions. The website's design is powered by <b>Tailwind</b> and <b>DaisayUI</b>, providing a sleek and modern user interface.",
 		},
 		{
-			id: 2,
+			id: 3,
 			src: eclothing,
 			git: "https://github.com/changliCoding/TurboEclothing",
 			demo: "https://eclothingproject.netlify.app/",
@@ -44,7 +60,7 @@ export default function Portfolio() {
 				"Designed and developed a responsive e-commerce website with a user-friendly interface using <b>HTML, CSS, and ReactJS and JavaScript</b>. Managing back end, authentication login and database with <b>Firebase Function and Auth0</b>. Built streamlined checkout process with <b>Stripe API</b>. ",
 		},
 		{
-			id: 3,
+			id: 4,
 			src: natours,
 			git: "https://github.com/changliCoding/natours",
 			images: [
@@ -60,7 +76,7 @@ export default function Portfolio() {
 				"Developed a responsive single page App with <b>Pug</b> backend rendering. Users could leave commits and ratings, with a secure authentication cookie sending <b>JSON Web Token</b>. A CRUD application exposed using a RESTful API made with <b>Node.js</b>. Exposed POST, GET, PATCH and DELETE HTTP methods using <b>Express</b>.",
 		},
 		{
-			id: 4,
+			id: 5,
 			src: jungle,
 			git: "https://github.com/changLiCoding/jungle-rails",
 			images: [
@@ -76,7 +92,7 @@ export default function Portfolio() {
 				"Jungle is a <b>Ruby on Rails</b> e-commerce website that offers a wide variety of plants for sale online. The platform includes an admin panel for creating categories and managing products, while users receive email notifications with their order details. <b>Active Record</b> and <b>PostgreSQL</b> are used for database management, while the front-end is built using Bootstrap. The website is integrated with <b>StripeAPI</b> for secure payment processing. The application is developed using <b>test-driven development</b> and includes test units and end-to-end testing using <b>RSpec and Cypress</b>, ensuring that the website is reliable and secure.",
 		},
 		{
-			id: 5,
+			id: 6,
 			src: quizApp,
 			git: "https://github.com/changLiCoding/QuizApp",
 			images: [
@@ -90,23 +106,6 @@ export default function Portfolio() {
 			title: "Quiz App",
 			description:
 				"Quiz App is an interactive platform that enables users to create, test, curate, and share quizzes and their results. The frontend is built using <b>EJS and Bootstrap</b> to provide an easy-to-use interface. The backend is built on <b>Node.js Express</b>, which is used to develop RESTful APIs, ensuring efficient communication between the client and the server. The app also employs <b>jQuery</b> for seamless animations and interactivity. Whether it's creating a quiz for fun, testing knowledge, or sharing results, Quiz App has you covered.",
-		},
-		{
-			id: 6,
-			src: interviewScheduler,
-			git: "https://github.com/changLiCoding/InterviewScheduler",
-			demo: "https://interview-scheduler-reactjs.netlify.app/",
-			images: [
-				"https://i.ibb.co/ChBM9Bj/interview-scheduler3.jpg",
-				"https://i.ibb.co/xqQFWyd/interview-scheduler1.jpg",
-				"https://i.ibb.co/mzZK0h9/interview-scheduler2.jpg",
-				"https://i.ibb.co/0YmYgwG/interview-scheduler4.jpg",
-				"https://i.ibb.co/BVrnkbX/interview-scheduler5.jpg",
-				"https://i.ibb.co/tqz9Kn1/interview-scheduler6.jpg",
-			],
-			title: "Interview Scheduler",
-			description:
-				"Interview Scheduler is a single page App that allows users to create, edit and delete scheduled interviews with candidates on <b>WebSocket</b> real-time without refreshing the page. The app uses modern web technologies such as <b>React</b> Hooks and <b>Redux</b> for state management, and <b>Axios</b> for making API calls to the server. Deployed front end on <b>Netlify</b>, back end on <b>RailWay</b>.",
 		},
 	];
 
